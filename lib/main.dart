@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'features/package_integration/presentation/views/integration_flow_screen.dart';
-import 'features/package_integration/presentation/bloc/package_integration_bloc.dart';
-import 'features/package_integration/data/package_integration_repository.dart';
+import 'package:heyflutter_assignment/core/helpers/ui_helpers.dart';
+import 'views/integration_flow_screen.dart';
+import 'bloc/package_integration/package_integration_bloc.dart';
+import 'data/repositories/package_integration_repository.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      scaffoldMessengerKey: scaffoldMessengerKey,
       title: 'Flutter Package Integrator',
       theme: ThemeData(
         primarySwatch: Colors.blue,

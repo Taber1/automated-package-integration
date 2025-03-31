@@ -1,6 +1,5 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 
 const double _tinySize = 5.0;
 const double _smallSize = 10.0;
@@ -28,19 +27,15 @@ Widget spacedDivider = const Column(
   ],
 );
 
-void showSnackbar(BuildContext context, String message, Color? color) {
-  ScaffoldMessenger.of(context).showSnackBar(
+final GlobalKey<ScaffoldMessengerState> scaffoldMessengerKey =
+    GlobalKey<ScaffoldMessengerState>();
+
+void showSnackbar({required String message, Color? color}) {
+  scaffoldMessengerKey.currentState?.showSnackBar(
     SnackBar(
       content: Text(message),
       backgroundColor: color,
     ),
-  );
-}
-
-void showToast({required String msg}) {
-  Fluttertoast.showToast(
-    msg: msg,
-    toastLength: Toast.LENGTH_LONG,
   );
 }
 
