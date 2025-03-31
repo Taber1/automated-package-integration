@@ -1,7 +1,7 @@
 # Automated Package Integration in a Flutter Project
 
 ## 📹 Demo Video
-![Demo Video](./HeyFlutter-Package%20Integration.mp4)
+![Demo Video](./output.gif)
 
 ## Overview
 This project automates the integration of the `google_maps_flutter` package into any Flutter project. It streamlines package installation, API key management, and platform-specific configurations for both Android and iOS.
